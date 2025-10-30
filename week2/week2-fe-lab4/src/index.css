@@ -1,0 +1,63 @@
+/* Global Styles and Body Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* App Layout */
+  #root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Header Styling */
+  header {
+    background-color: #0056b3; /* A nice blue */
+    color: white;
+    padding: 1em 2em;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Sidebar and Main Content Area */
+  aside {
+    background-color: #e0e0e0;
+    padding: 20px;
+    width: 200px;
+  }
+  
+  aside ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  aside li {
+    margin-bottom: 10px;
+  }
+  
+  aside a {
+    text-decoration: none;
+    color: #0056b3;
+  }
+  
+  /* Article Styling */
+  article {
+    padding: 20px;
+    background-color: white;
+    margin: 0 0 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Footer Styling */
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 1em 2em;
+    text-align: center;
+    margin-top: auto; /* Pushes the footer to the bottom */
+  }
