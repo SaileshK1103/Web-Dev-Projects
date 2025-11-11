@@ -7,8 +7,10 @@ const Counter = () => {
   return (
     <div className={`state ${theme}`}>
       <h1>UseState Component</h1>
-      <button onClick={()=> setTheme('dark')}>Dark</button>
-      <button onClick={()=> setTheme("light")}>Light</button>
+      {/*<button onClick={()=> setTheme('dark')}>Dark</button>
+      <button onClick={()=> setTheme("light")}>Light</button>*/}
+      {/* Toggle theme */}
+      <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>Toggle Theme</button>
       <h2>DISPLAY COUNT HERE</h2>
       <h2>{count}</h2>
       <button onClick={() => setCount(count + 1)}>
