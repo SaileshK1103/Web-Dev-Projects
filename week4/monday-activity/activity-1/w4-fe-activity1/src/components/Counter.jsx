@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import './Counter.css';
+import { useState } from "react";
+import "./Counter.css";
 
 const Counter = () => {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState("light");
   const [count, setCount] = useState(0);
   return (
     <div className={`state ${theme}`}>
@@ -10,15 +10,20 @@ const Counter = () => {
       {/*<button onClick={()=> setTheme('dark')}>Dark</button>
       <button onClick={()=> setTheme("light")}>Light</button>*/}
       {/* Toggle theme */}
-      <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>Toggle Theme</button>
+      <button onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+        Toggle Theme
+      </button>
       <h2>DISPLAY COUNT HERE</h2>
       <h2>{count}</h2>
-      <button onClick={() => setCount(count + 1)}>
+      {/*<button onClick={() => setCount(count + 1)}>
         Increment
       </button>
       <button onClick={()=> setCount(count - 1)}>
         Decrement
-      </button>
+    </button>*/}
+    {/* Counter using callback*/}
+      <button onClick={() => setCount(prevCount => prevCount + 1)}>Increment</button>
+      <button onClick={() => setCount(prevCount => prevCount - 1)}>Decrement</button>
     </div>
   );
 };
