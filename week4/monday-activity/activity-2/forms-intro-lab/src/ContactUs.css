@@ -1,0 +1,84 @@
+.contact-form-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  font-family: "Lato", Arial, sans-serif;
+}
+
+.contact-form-container h2 {
+  text-align: center;
+  color: #246075;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.contact-form-container form > div {
+  margin-bottom: 1.2rem;
+}
+
+.contact-form-container label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #357ca5;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.contact-form-container input,
+.contact-form-container select,
+.contact-form-container textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+
+.contact-form-container input:focus,
+.contact-form-container select:focus,
+.contact-form-container textarea:focus {
+  outline: none;
+  border-color: #357ca5;
+}
+
+.contact-form-container textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+
+.contact-form-container button {
+  display: block;
+  width: 100%;
+  padding: 0.7rem;
+  font-size: 1rem;
+  background: #357ca5;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+  transition: background 0.2s;
+}
+
+.contact-form-container button:hover {
+  background: #246075;
+}
+
+.contact-form-container .success-message {
+  color: #2d9c61;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.contact-form-container .error-message {
+  color: #d21034;
+  margin-top: 1rem;
+  text-align: center;
+}
