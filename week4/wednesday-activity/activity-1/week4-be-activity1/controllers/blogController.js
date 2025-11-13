@@ -32,7 +32,7 @@ const updateBlog = async(req,res) => {
         { ...req.body },
         { new: true }
     );
-    if(updateBlog) {
+    if(updatedBlog) {
         res.status(200).json(updatedBlog);
     } else {
         res.status(404).json({message: "Blog not found"});
@@ -43,8 +43,8 @@ const updateBlog = async(req,res) => {
 const deleteBlog = async(req, res) => {
     const {blogId} = req.params;
 
-    const deletedBlog = await Blog.findByIdAndDelete({blogId});
-    if (deleteBlog) {
+    const deletedBlog = await Blog.findByIdAndDelete(blogId);
+    if (deletedBlog) {
         res.status(200).json({message: "Blog deleted successfully"});
     } else {
         res.status(404).json({message: "Blog not found"})

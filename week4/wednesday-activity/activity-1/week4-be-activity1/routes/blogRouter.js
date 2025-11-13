@@ -21,7 +21,7 @@ router.post('/', createBlog);
 // DELETE /blogs/:blogId
 router.delete('/:blogId', deleteBlog);
 
-// PATCH /blogs/:blogId
-router.patch('/:id', updateBlog);
+// PUT /blogs/:blogId
+router.put('/:blogId', updateBlog);
 
 module.exports = router;
