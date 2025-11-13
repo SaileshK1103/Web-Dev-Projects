@@ -1,21 +1,27 @@
 const express = require('express');
-const {getAllBlogs, getBlogById, createBlog, updateBlog, deleteBlog} = require('../controllers/blogController');
-
 const router = express.Router();
 
-// GET all blogs
+const {
+    getAllBlogs, 
+    getBlogById, 
+    createBlog, 
+    updateBlog, 
+    deleteBlog} 
+    = require('../controllers/blogController');
+
+// GET /blogs
 router.get('/', getAllBlogs);
 
-// GET a single blog
-router.get('/:id', getBlogById);
+// GET /blogs/:blogId
+router.get('/:blogId', getBlogById);
 
-// POST a new blog
+// POST /blogs
 router.post('/', createBlog);
 
-// DELETE a blog
-router.delete('/:id', deleteBlog);
+// DELETE /blogs/:blogId
+router.delete('/:blogId', deleteBlog);
 
-// UPDATE a blog 
+// PATCH /blogs/:blogId
 router.patch('/:id', updateBlog);
 
 module.exports = router;
