@@ -41,7 +41,7 @@ const getCarById = async (req, res) => {
   }
 };
 
-// PUT /cars/:carId
+// PATCH /cars/:carId
 const updateCar = async (req, res) => {
   const { carId } = req.params;
 
@@ -50,7 +50,7 @@ const updateCar = async (req, res) => {
   }
 
   try {
-    const updatedCar = await Car.findOneAndUpdate(
+    const updatedCar = await Car.findOneAndReplace(
       { _id: carId },
       { ...req.body },
       { new: true }

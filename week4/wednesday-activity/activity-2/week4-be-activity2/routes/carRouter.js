@@ -18,8 +18,8 @@ router.post("/", createCar);
 // GET /cars/:carId
 router.get("/:carId", getCarById);
 
-// PUT /cars/:carId
-router.put("/:carId", updateCar);
+// PATCH /cars/:carId
+router.patch("/:carId", updateCar);
 
 // DELETE /cars/:carId
 router.delete("/:carId", deleteCar);

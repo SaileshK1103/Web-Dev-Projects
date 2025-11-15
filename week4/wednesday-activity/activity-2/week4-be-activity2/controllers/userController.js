@@ -43,7 +43,7 @@ const getUserById = async (req, res) => {
   }
 };
 
-// PUT /users/:userId
+// PATCH /users/:userId
 const updateUser = async (req, res) => {
   const { userId } = req.params;
 
@@ -52,7 +52,7 @@ const updateUser = async (req, res) => {
   }
 
   try {
-    const updatedUser = await User.findOneAndUpdate(
+    const updatedUser = await User.findOneAndReplace(
       { _id: userId },
       { ...req.body },
       { new: true }

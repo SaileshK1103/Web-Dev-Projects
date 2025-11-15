@@ -42,7 +42,7 @@ const getBlogById = async (req, res) => {
   }
 };
 
-// PUT /blogs/:blogId
+// PATCH /blogs/:blogId
 const updateBlog = async (req, res) => {
   const { blogId } = req.params;
 
@@ -51,7 +51,7 @@ const updateBlog = async (req, res) => {
   }
 
   try {
-    const updatedBlog = await Blog.findOneAndUpdate(
+    const updatedBlog = await Blog.findOneAndReplace(
       { _id: blogId },
       { ...req.body },
       { new: true }
