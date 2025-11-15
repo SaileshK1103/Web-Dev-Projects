@@ -2,6 +2,8 @@
 const connectDB = require("./config/db");
 const express = require("express");
 const carRouter = require("./routes/carRouter");
+const blogRouter = require("./routes/blogRouter");
+const userRouter = require("./routes/userRouter")
 const {requestLogger,unknownEndpoint,errorHandler} = require("./middleware/customMiddleware");
  
 // express app
@@ -22,8 +24,9 @@ app.get("/", (req, res) => res.send("API Running!"));
 app.use("/api/cars", carRouter);
 
 // Use the userRouter for all /users routes¨
-
+app.use("/api/blogs", blogRouter);
 // Use the blogRouter for all /cars routes
+app.use("/api/users", userRouter);
 
 app.use(unknownEndpoint);
 app.use(errorHandler);

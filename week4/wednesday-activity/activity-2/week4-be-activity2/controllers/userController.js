@@ -77,15 +77,14 @@ const deleteUser = async (req, res) => {
 
   try {
     const deletedUser = await User.findOneAndDelete({ _id: userId });
-  if (deletedUser) {
-    res.status(200).json({ message: "User deleted successfully" });
-  } else {
-    res.status(404).json({ message: "User not found" });
-  }
+    if (deletedUser) {
+      res.status(200).json({ message: "User deleted successfully" });
+    } else {
+      res.status(404).json({ message: "User not found" });
+    }
   } catch (error) {
     res.status(500).json({ message: "Failed to delete user" });
   }
-  
 };
 
 module.exports = {

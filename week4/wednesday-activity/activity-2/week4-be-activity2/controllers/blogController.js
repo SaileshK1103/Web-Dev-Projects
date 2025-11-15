@@ -26,7 +26,7 @@ const createBlog = async (req, res) => {
 const getBlogById = async (req, res) => {
   const { blogId } = req.params;
 
-  if (!mongoose.Types.ObjectId.isValid(blog)) {
+  if (!mongoose.Types.ObjectId.isValid(blogId)) {
     return res.status(400).json({ message: "Invalid blog ID" });
   }
   
