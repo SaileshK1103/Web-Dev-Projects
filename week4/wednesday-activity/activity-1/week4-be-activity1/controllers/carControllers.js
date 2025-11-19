@@ -1,4 +1,5 @@
 const Car = require("../models/carModel");
+const mongoose = require("mongoose");
 
 // GET /cars
 const getAllCars = async (req, res) => {
